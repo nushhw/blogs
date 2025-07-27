@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinyuan's Blog</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-blog"></i> Xinyuan's Blog</h1>
+            <p class="tagline">My thoughts, projects, and coding journey</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="post-form-section">
+            <h2><i class="fas fa-edit"></i> Create New Post</h2>
+            <form id="postForm" class="post-form">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" placeholder="Enter post title..." required>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" placeholder="Write your post content..." rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postTags">Tags</label>
+                    <input type="text" id="postTags" placeholder="javascript, web-dev, programming (comma separated)">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Publish Post
+                </button>
+            </form>
+        </section>
+
+        <section class="posts-section">
+            <h2><i class="fas fa-newspaper"></i> My Posts</h2>
+            <div id="postsContainer" class="posts-container">
+                <!-- Posts will be dynamically added here -->
+            </div>
+            <div id="noPosts" class="no-posts">
+                <i class="fas fa-file-alt"></i>
+                <p>No posts yet. Create your first post above!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Xinyuan. Built with <i class="fas fa-heart"></i> and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
